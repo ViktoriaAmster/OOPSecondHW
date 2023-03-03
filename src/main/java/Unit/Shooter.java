@@ -13,7 +13,7 @@ public abstract class Shooter extends Human {
         this.range = range;
     }
 
-    public boolean findFarmer(ArrayList<Human> team) {
+    protected boolean findFarmer(ArrayList<Human> team) {
         ArrayList<Human> arrayFarmers = new ArrayList<>();
         for (Human pers : team) {
             if (pers.getInfo().toString().contains("Ф")

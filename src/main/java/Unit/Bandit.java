@@ -16,9 +16,8 @@ public class Bandit extends Infantry{
     public StringBuilder getInfo() {
         StringBuilder builder = new StringBuilder();
         return builder.append("Бандит: \t").append(Bandit.super.name)
-                .append("\t ATK: \t").append(Bandit.super.attack)
                 .append("\t HP: \t").append(Bandit.super.hp)
-                .append("\t Speed: \t").append(Bandit.super.speed);
+                .append("\t State: \t").append(Bandit.super.state);
     }
 
     @Override

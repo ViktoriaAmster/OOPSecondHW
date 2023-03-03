@@ -46,7 +46,9 @@ public class main {
 
     public static void gameInfo (ArrayList<Human> team1, ArrayList<Human> team2) {
         for (int i = 0; i < team1.size(); i++) {
-            System.out.println(team1.get(i).getInfo());
+            System.out.
+
+                    println(team1.get(i).getInfo());
         }
         System.out.println();
         for (int i = 0; i < team2.size(); i++) {

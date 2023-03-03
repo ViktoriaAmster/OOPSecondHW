@@ -1,6 +1,8 @@
 package Unit;
 
-public abstract class Magic extends Human{
+import java.util.ArrayList;
+
+public abstract class Magic extends Human {
 
     protected int mana;
     protected int maxMana;
@@ -14,7 +16,30 @@ public abstract class Magic extends Human{
         this.heal = heal;
     }
 
-    public Float healing (Integer damage, Human human){ return hp;}
 
+    protected void healing(ArrayList<Human> ourTeam) {
+        ArrayList<Human> notMaxHPTeam = new ArrayList<>();
+        for (Human pers : ourTeam) {
+            if (pers.getHp() < pers.getMaxHp()) {
+                notMaxHPTeam.add(pers);
+            }
+        }
+        if (notMaxHPTeam.size() > 0) {
+            Human persForHeal = findNearest(notMaxHPTeam);
+            if (persForHeal.getHp() + heal > persForHeal.getMaxHp()) {
+                persForHeal.setHp(persForHeal.getMaxHp());
+            } else {
+                persForHeal.setHp(persForHeal.getHp() + heal);
+            }
+        }
     }
+
+    public void step(ArrayList<Human> ourTeam, ArrayList<Human> notOurTeam) {
+        if (mana > 0) {
+            healing(ourTeam);
+            mana -= 5;
+        }
+    }
+}
+
 

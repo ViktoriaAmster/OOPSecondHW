@@ -16,9 +16,8 @@ public class Farmer extends Human{
     public StringBuilder getInfo() {
         StringBuilder builder = new StringBuilder();
         return builder.append("Фермер: \t").append(Farmer.super.name)
-                .append("\t ATK: \t").append(Farmer.super.attack)
                 .append("\t HP: \t").append(Farmer.super.hp)
-                .append("\t Speed: \t").append(Farmer.super.speed);
+                .append("\t State: \t").append(Farmer.super.state);
     }
 
     @Override

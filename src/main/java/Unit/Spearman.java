@@ -10,9 +10,8 @@ public class Spearman extends Infantry{
     public StringBuilder getInfo() {
         StringBuilder builder = new StringBuilder();
         return builder.append("Копейщик: \t").append(Spearman.super.name)
-                .append("\t ATK: \t").append(Spearman.super.attack)
                 .append("\t HP: \t").append(Spearman.super.hp)
-                .append("\t Speed: \t").append(Spearman.super.speed);
+                .append("\t State: \t").append(Spearman.super.state);
     }
 
     @Override
